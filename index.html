@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Login  </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00ff99;
+            --secondary-color: #e3f2fd;
+            --text-color: #333;
+            --light-text-color: #888;
+            --bg-color: #222;
+            --card-bg-color: #fff;
+            --border-color: #ddd;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-card {
+            background-color: var(--card-bg-color);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 255, 106, 0.349);
+            width: 380px;
+            text-align: center;
+        }
+        .login-card h2 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .login-card p {
+            color: var(--light-text-color);
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--text-color);
+            font-weight: 400;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            box-sizing: border-box;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px var(--secondary-color);
+        }
+        .form-group button {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .form-group button:hover {
+            background-color: #0cb15e;
+        }
+        .form-group button:active {
+            transform: scale(0.98);
+        }
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(000, 000, 000, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 10;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease;
+        }
+        .loading-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+        }
+        .loading-text {
+            margin-top: 15px;
+            font-size: 18px;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h2>Selamat Datang</h2>
+        <p>Silahkan masukan email dan password anda.</p>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">Alamat Email</label>
+                <input type="email" id="email" name="email" required placeholder="Masukkan email Anda">
+            </div>
+            <div class="form-group">
+                <label for="password">Kata Sandi</label>
+                <input type="password" id="password" name="password" required placeholder="Masukkan kata sandi Anda">
+            </div>
+            <div class="form-group">
+                <button type="submit">Masuk</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const loadingOverlay = document.getElementById('loading-overlay');
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Mencegah form untuk submit secara default
+            
+            // Tampilkan loading overlay
+            loadingOverlay.classList.add('active');
+
+            // Tunggu selama 3 detik (3000 milidetik) sebelum mengalihkan
+            setTimeout(() => {
+                // Sembunyikan loading overlay (opsional)
+                loadingOverlay.classList.remove('active');
+                
+                // Alihkan ke halaman tujuan
+                window.location.href = 'dashboard.html';
+            }, 3000); 
+        });
+    </script>
+</body>
+</html>

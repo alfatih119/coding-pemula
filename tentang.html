@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang</title>
+    <link rel="stylesheet" href="aktivitas.css">
+</head>
+<body>
+    <header>
+        <h1>Halaman Tentang</h1>
+    </header>
+
+    <main>
+        <section class="aktivitas">
+            <h2>Edit Konten</h2>
+            <form id="form-tentang">
+                <label for="input-judul">Judul:</label>
+                <input type="text" id="input-judul" placeholder="Judul halaman" required>
+                
+                <label for="input-paragraf1">Paragraf 1:</label>
+                <textarea id="input-paragraf1" placeholder="Tulis paragraf pertama di sini..." rows="4" required></textarea>
+                
+                <label for="input-paragraf2">Paragraf 2:</label>
+                <textarea id="input-paragraf2" placeholder="Tulis paragraf kedua di sini..." rows="4"></textarea>
+
+                <div class="tombol-grup">
+                    <button type="submit">Simpan Konten</button>
+                    <button type="button" id="tombol-hapus-konten">Hapus Konten</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="aktivitas">
+            <h2 id="judul-tampil"></h2>
+            <p id="paragraf1-tampil"></p>
+            <p id="paragraf2-tampil"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hak Cipta Dilindungi</p>
+    </footer>
+
+    <script src="tentang-script.js"></script>
+</body>
+</html>

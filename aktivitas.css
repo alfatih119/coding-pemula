@@ -1,0 +1,204 @@
+/* Warna primer: #00ff99 */
+/* Warna sekunder: #222 */
+
+body {
+    background-color: #222;
+    color: #00ff99;
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #00ff99;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.aktivitas {
+    background-color: #333;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.aktivitas h2 {
+    color: #00ff99;
+    border-bottom: 2px solid #00ff99;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.aktivitas ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.aktivitas li {
+    background-color: #444;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #00ff99;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Gaya untuk Halaman Aktivitas */
+#form-aktivitas {
+    display: flex;
+    gap: 10px;
+}
+
+#input-aktivitas {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #00ff99;
+    background-color: #444;
+    color: #00ff99;
+    border-radius: 4px;
+}
+
+#form-aktivitas button, .tombol-hapus {
+    padding: 10px 15px;
+    border: none;
+    background-color: #00ff99;
+    color: #222;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.tombol-hapus {
+    background-color: #ff3333;
+    color: white;
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+/* Gaya untuk Halaman Tentang */
+#form-tentang {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-tentang label {
+    font-weight: bold;
+    color: #00ff99;
+}
+
+#form-tentang input[type="text"],
+#form-tentang textarea {
+    padding: 10px;
+    border: 2px solid #00ff99;
+    background-color: #444;
+    color: #00ff99;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#form-tentang button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #00ff99;
+    color: #222;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.tentang-konten {
+    text-align: center;
+}
+
+.tentang-konten h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.tentang-konten p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+/* ...kode CSS sebelumnya... */
+
+/* Gaya untuk Halaman Tentang */
+#form-tentang {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-tentang label {
+    font-weight: bold;
+    color: #00ff99;
+}
+
+#form-tentang input[type="text"],
+#form-tentang textarea {
+    padding: 10px;
+    border: 2px solid #00ff99;
+    background-color: #444;
+    color: #00ff99;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tombol-grup {
+    display: flex;
+    gap: 10px;
+}
+
+.tombol-grup button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #00ff99;
+    color: #222;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#tombol-hapus-konten {
+    background-color: #ff3333;
+    color: white;
+}
+
+.tentang-konten {
+    text-align: center;
+}
+
+.tentang-konten h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.tentang-konten p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    font-size: 1.1em;
+    text-align: justify;
+}
